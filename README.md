@@ -74,6 +74,4 @@ python -I src/gera_relatorio_final.py
 
 ## Privacidade
 
-Nenhuma instituição é identificada. Os CSVs brutos do Reclame Aqui e o mapa empresa → tipo têm nomes de
-empresas e ficam **fora** do repositório (`.gitignore`). Só o resultado agregado por tipo,
-`results/varredura_reclamacoes.json`, é público. Nenhum dado pessoal foi coletado.
+Nenhuma instituição é identificada.
