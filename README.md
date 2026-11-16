@@ -48,6 +48,4 @@ A base vem do Kaggle (*Credit Card Fraud Detection 2026*, usuário `uditjain13`)
 
 ## Privacidade
 
-Nenhuma instituição é identificada. Os CSVs brutos do Reclame Aqui e o mapa empresa → tipo têm nomes de
-empresas e ficam **fora** do repositório (`.gitignore`). Só o resultado agregado por tipo,
-`results/varredura_reclamacoes.json`, é público. Nenhum dado pessoal foi coletado.
+Nenhuma instituição é identificada.
