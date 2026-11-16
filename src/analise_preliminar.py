@@ -8,7 +8,7 @@ Etapas cobertas (Relatório Parcial - Módulo 2):
   3. Modelos baseline (Scikit-learn) e análise de limiar
   4. Teste do caso real (golpe da maquininha) no modelo e num protótipo de regras
 
-Uso:  python -I src/analise_preliminar.py   (a partir da pasta proj-integrador-1)
+Uso:  python -I src/analise_preliminar.py   (a partir da raiz do repositório)
 Saídas: figures/*.png e results/metricas.json
 """
 from __future__ import annotations

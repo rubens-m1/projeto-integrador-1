@@ -2,8 +2,8 @@
 Exporta a cartilha "Golpe da maquininha" (src/cartilha/cartilha_golpe_maquininha.html, página A4)
 para PNG (Figura 13 do relatório) e PDF (distribuição), usando o Edge ou o Chrome em modo headless.
 
-Uso:  python -I src/gera_cartilha.py   (a partir da pasta proj-integrador-1)
-Saídas: figures/fig13_cartilha_golpe_maquininha.png e relatorio/Cartilha_Golpe_da_Maquininha.pdf
+Uso:  python -I src/gera_cartilha.py   (a partir da raiz do repositório)
+Saídas: figures/fig13_cartilha_golpe_maquininha.png e Cartilha_Golpe_da_Maquininha.pdf (na raiz)
 As fontes (Archivo e Inter) vêm do Google Fonts: sem internet, o navegador usa Arial.
 """
 from __future__ import annotations
@@ -18,7 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 HTML = ROOT / "src" / "cartilha" / "cartilha_golpe_maquininha.html"
 PNG = ROOT / "figures" / "fig13_cartilha_golpe_maquininha.png"
-PDF = ROOT / "relatorio" / "Cartilha_Golpe_da_Maquininha.pdf"
+PDF = ROOT / "Cartilha_Golpe_da_Maquininha.pdf"
+PNG.parent.mkdir(exist_ok=True)
 
 CANDIDATOS = [
     Path(os.environ.get("ProgramFiles(x86)", "")) / "Microsoft/Edge/Application/msedge.exe",

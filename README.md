@@ -8,21 +8,45 @@ compras no crédito foram aprovadas. A análise mostra que o modelo, sozinho, v�
 risco. O alerta só aparece quando a **recusa técnica vira dado**. Cinco regras simples teriam bloqueado o
 cartão já na segunda tentativa.
 
-## O que tem aqui
+## Estrutura
 
-| Caminho | Conteúdo |
+```
+projeto-integrador-1/
+├── Cartilha_Golpe_da_Maquininha.pdf   # cartilha para o consumidor (sinais de alerta e como reclamar)
+├── notebook/
+│   ├── deteccao_fraudes_golpe_maquininha.ipynb   # comece por aqui: análise completa, já executada
+│   └── deteccao_fraudes_golpe_maquininha.html    # o mesmo notebook, para ler no navegador
+├── results/
+│   └── varredura_reclamacoes.json     # reclamações públicas agregadas por tipo de instituição
+├── src/
+│   ├── analise_preliminar.py          # EDA, modelos e caso real (Módulo 2)
+│   ├── solucao_final.py               # limiar ajustado, Gradient Boosting, regras R1–R5 (Módulo 3)
+│   ├── varredura_reclamacoes.py       # gera results/varredura_reclamacoes.json (precisa dos dados privados)
+│   ├── gera_cartilha.py               # exporta a cartilha HTML para PDF e PNG
+│   ├── cartilha/cartilha_golpe_maquininha.html
+│   ├── gera_notebook.py               # monta e executa o notebook
+│   ├── gera_relatorio.py              # relatório parcial (Módulo 2, .docx)
+│   └── gera_relatorio_final.py        # relatório final (Módulo 3, .docx)
+├── requirements.txt
+└── README.md
+```
+
+As pastas abaixo **não estão no repositório**: são criadas pelos scripts ao reproduzir o projeto.
+
+| Pasta / arquivo gerado | Gerado por |
 |---|---|
-| [`notebook/deteccao_fraudes_golpe_maquininha.ipynb`](notebook/deteccao_fraudes_golpe_maquininha.ipynb) | **Comece por aqui.** Análise completa e narrada, já executada (também em `.html`) |
-| `src/analise_preliminar.py` | EDA, modelos e caso real do relatório parcial (Módulo 2) → `results/metricas.json` |
-| `src/solucao_final.py` | Melhorias da solução final: limiar ajustado, Gradient Boosting, regras R1–R5 em cenários → `results/metricas_final.json` |
-| `src/cartilha/cartilha_golpe_maquininha.html`, `src/gera_cartilha.py` | Cartilha em HTML (A4). O script exporta o PDF e a figura pelo Edge/Chrome headless |
-| `src/varredura_reclamacoes.py` | Agrega reclamações públicas por tipo de instituição (dados brutos privados; ver abaixo) |
-| `src/gera_notebook.py` | Monta e executa o notebook |
-| `src/gera_relatorio.py`, `src/gera_relatorio_final.py` | Geram os relatórios dos Módulos 2 e 3 (.docx) |
-| `relatorio/Cartilha_Golpe_da_Maquininha.pdf` | Cartilha para o consumidor: sinais de alerta e como reclamar |
-| `figures/` | Figuras dos relatórios |
+| `figures/fig01`–`fig10` e `results/metricas.json` | `src/analise_preliminar.py` |
+| `figures/fig11`, `fig12`, `fig14` e `results/metricas_final.json` | `src/solucao_final.py` |
+| `figures/fig13_cartilha_golpe_maquininha.png` e `Cartilha_Golpe_da_Maquininha.pdf` | `src/gera_cartilha.py` |
+| `relatorio/Relatorio_Parcial_Modulo2_Rubens.docx` | `src/gera_relatorio.py` |
+| `relatorio/Relatorio_Final_Modulo3_Rubens.docx` | `src/gera_relatorio_final.py` |
 
 ## Como reproduzir
+
+1. Baixe a base do Kaggle (*Credit Card Fraud Detection 2026*, usuário `uditjain13`) e salve na raiz do
+   repositório com o nome `Base de Dados - Projeto Integrador - credit_card_fraud_2026.csv`
+   (o arquivo fica fora do Git pelo `.gitignore`).
+2. Rode, a partir da raiz e nesta ordem (os relatórios usam as figuras e métricas dos passos anteriores):
 
 ```bash
 pip install -r requirements.txt
@@ -30,11 +54,13 @@ python -I src/analise_preliminar.py
 python -I src/solucao_final.py
 python -I src/gera_cartilha.py
 python -I src/gera_notebook.py
+python -I src/gera_relatorio.py
 python -I src/gera_relatorio_final.py
 ```
 
-A base vem do Kaggle (*Credit Card Fraud Detection 2026*, usuário `uditjain13`). O arquivo
-`Base de Dados - Projeto Integrador - credit_card_fraud_2026.csv` precisa estar na raiz.
+`src/gera_cartilha.py` precisa do Microsoft Edge ou do Google Chrome instalado.
+`src/varredura_reclamacoes.py` não faz parte da reprodução: depende dos dados brutos privados (ver
+[Privacidade](#privacidade)), e o resultado dele já está em `results/varredura_reclamacoes.json`.
 
 ## Principais resultados
 

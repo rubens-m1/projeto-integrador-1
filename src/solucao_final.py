@@ -12,7 +12,7 @@ Melhorias em relação à solução inicial (Relatório Parcial, Módulo 2):
 
 Usa a MESMA divisão treino/teste do Módulo 2 (test_size=0,25, estratificada, semente 42).
 
-Uso:  python -I src/solucao_final.py   (a partir da pasta proj-integrador-1)
+Uso:  python -I src/solucao_final.py   (a partir da raiz do repositório)
 Saídas: figures/fig11, fig12 e fig14 (*.png),
         results/metricas_final.json
 """

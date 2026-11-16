@@ -7,7 +7,7 @@ Números: results/metricas.json (src/analise_preliminar.py), results/metricas_fi
 PREENCHER: os quatro campos logo abaixo (PENDENTES). Enquanto estiverem como None, o
 relatório mostra um marcador amarelo [A PREENCHER: ...] no lugar.
 
-Uso:  python -I src/gera_relatorio_final.py   (a partir da pasta proj-integrador-1)
+Uso:  python -I src/gera_relatorio_final.py   (a partir da raiz do repositório)
 """
 from __future__ import annotations
 

@@ -9,7 +9,7 @@ Os números do Boletim Consumidor.gov.br 2025 (Senacon/MJSP) estão transcritos 
 
 No relatório, nenhuma instituição é nomeada: as empresas são agregadas por TIPO.
 
-Uso:  python -I src/varredura_reclamacoes.py   (a partir da pasta proj-integrador-1)
+Uso:  python -I src/varredura_reclamacoes.py   (a partir da raiz do repositório)
 Saída: results/varredura_reclamacoes.json
 """
 from __future__ import annotations

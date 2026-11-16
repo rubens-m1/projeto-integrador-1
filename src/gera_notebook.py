@@ -6,7 +6,7 @@ exploratória, os modelos, o teste do caso real e o motor de regras. A última s
 se os números batem com results/metricas.json e results/metricas_final.json, que são os
 números usados no relatório.
 
-Uso:  python -I src/gera_notebook.py   (a partir da pasta proj-integrador-1, depois dos outros scripts)
+Uso:  python -I src/gera_notebook.py   (a partir da raiz do repositório, depois dos outros scripts)
 """
 from __future__ import annotations
 

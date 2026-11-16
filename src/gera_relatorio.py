@@ -2,7 +2,7 @@
 Gera o Relatório Parcial (Módulo 2) em .docx seguindo a estrutura do template UFMS Digital.
 Todos os números vêm de results/metricas.json (gerado por src/analise_preliminar.py).
 
-Uso:  python -I src/gera_relatorio.py   (a partir da pasta proj-integrador-1)
+Uso:  python -I src/gera_relatorio.py   (a partir da raiz do repositório)
 """
 from __future__ import annotations
 
