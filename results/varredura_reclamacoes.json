@@ -1,0 +1,55 @@
+{
+  "data_coleta": "2026-11-08",
+  "reclame_aqui": {
+    "busca": "golpe da maquininha",
+    "total_reclamacoes_busca": 6550,
+    "empresas_top": 50,
+    "reclamacoes_top50": 5371,
+    "por_tipo": {
+      "Bancos e emissores de cartão": {
+        "reclamacoes": 1885,
+        "empresas": 22,
+        "pct_top50": 35.1
+      },
+      "Maquininhas e instituições de pagamento": {
+        "reclamacoes": 1870,
+        "empresas": 13,
+        "pct_top50": 34.8
+      },
+      "Aplicativos de entrega, serviços e transporte": {
+        "reclamacoes": 1466,
+        "empresas": 8,
+        "pct_top50": 27.3
+      },
+      "Outros (varejo, serviços e outros)": {
+        "reclamacoes": 150,
+        "empresas": 7,
+        "pct_top50": 2.8
+      }
+    },
+    "banco_do_caso": {
+      "reclamacoes": 378,
+      "posicao_geral": 3,
+      "primeiro_entre_bancos": true,
+      "pct_busca": 5.8
+    },
+    "problemas_top": {
+      "Cobrança indevida": 1470,
+      "Estorno do valor pago": 970,
+      "Propaganda enganosa": 312,
+      "Outro problema": 311,
+      "Mau Atendimento": 161
+    },
+    "leitura_qualitativa_n": 46,
+    "obs": "Busca por texto: conta reclamações que mencionam os termos, não golpes confirmados. O site substitui a palavra 'golpe' por '[Editado pelo Reclame Aqui]' nos títulos."
+  },
+  "boletim_consumidor_gov_2025": {
+    "reclamacoes_finalizadas": 2328863,
+    "pct_segmento_bancos_financeiras_cartao": 42.84,
+    "assunto_cartao_credito_debito_loja": 433240,
+    "pct_assunto_cartao": 18.6,
+    "pct_grupo_cobranca_contestacao": 52.14,
+    "pct_nao_reconhecido_no_segmento_bancario": 5.62,
+    "indice_solucao_geral_pct": 81.43
+  }
+}

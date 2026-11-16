@@ -1,0 +1,25 @@
+# Dados brutos das reclamações e mapa empresa -> tipo: contêm nomes de instituições.
+# O trabalho não identifica instituições; só o agregado results/varredura_reclamacoes.json é público.
+privado/
+results/reclameaqui_*.csv
+
+# Templates, entregas em PDF e arquivos de trabalho pessoais
+Cópia de*
+RUBENS*
+rubens-checkout*.pdf
+HANDOFF.md
+relatorio/*.pdf
+!relatorio/Cartilha_Golpe_da_Maquininha.pdf
+~$*
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
